@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "memobook",
-    "version": "0.0.0"
+    "version": "0.0.1"
   },
   "tauri": {
     "updater": {
@@ -16,7 +16,9 @@
         "installMode": "basicUi"
       },
       "active": true,
-      "endpoints": ["https://api.memobook.org/updates"],
+      "endpoints": [
+        "https://api.memobook.org/updates"
+      ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDEzNTZBMEVDNEFGMDc2NjAKUldSZ2R2Qks3S0JXRTVzY0o3c2pzVGF1ZFE3Z3I4dlpiVFFDQ3NQTGhDUlRJTlV5YmMrcmdJTWgK"
     },
@@ -30,7 +32,10 @@
         "open": true
       },
       "http": {
-        "scope": ["http://localhost:5000", "https://api.memobook.org"]
+        "scope": [
+          "http://localhost:5000",
+          "https://api.memobook.org"
+        ]
       },
       "clipboard": {
         "all": true,
