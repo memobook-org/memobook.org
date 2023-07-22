@@ -1,0 +1,66 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "memobook",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "updater": {
+      "windows": {
+        "installMode": "basicUi"
+      },
+      "active": true,
+      "endpoints": ["https://api.memobook.org/updates"],
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDEzNTZBMEVDNEFGMDc2NjAKUldSZ2R2Qks3S0JXRTVzY0o3c2pzVGF1ZFE3Z3I4dlpiVFFDQ3NQTGhDUlRJTlV5YmMrcmdJTWgK"
+    },
+    "allowlist": {
+      "all": false,
+      "dialog": {
+        "message": true
+      },
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "http": {
+        "scope": ["http://localhost:5000", "https://api.memobook.org"]
+      },
+      "clipboard": {
+        "all": true,
+        "writeText": true,
+        "readText": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "org.memobook.app",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "maximized": true,
+        "resizable": true,
+        "title": "memobook",
+        "width": 800,
+        "height": 800
+      }
+    ]
+  }
+}

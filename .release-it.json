@@ -1,0 +1,31 @@
+{
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": false
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "out": [
+        { "file": "src-tauri/tauri.conf.json", "path": "package.version" },
+        { "file": "src-tauri/cargo.toml", "path": "package.version" },
+        {
+          "file": "src-tauri/Cargo.lock",
+          "path": "[package].version",
+          "type": "text/toml"
+        }
+      ]
+    }
+  },
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "push": true,
+    "tag": true
+  },
+  "hooks": {
+    "after:bump": "npm run changelog",
+    "after:git:release": "echo After git push, before github release",
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  }
+}

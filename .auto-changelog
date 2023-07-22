@@ -1,0 +1,16 @@
+{
+  "replaceText": {
+    "[Ff]eature:": "",
+    "[Ff]ix:": "",
+    "[Bb]reak:": ""
+  },
+  "output": "CHANGELOG.md",
+  "template": "changelog.hbs",
+  "unreleased": false,
+  "commitLimit": false,
+  "hideCredit": true,
+  "compareUrl": "https://github.com/memobook-org/memobook.app/compare/{from}...{to}",
+  "issueUrl": "https://github.com/memobook-org/memobook.app/issues/{id}",
+  "commitUrl": "https://github.com/memobook-org/memobook.app/commit/{id}",
+  "mergeUrl": "https://github.com/memobook-org/memobook.app/pulls/{id}"
+}
